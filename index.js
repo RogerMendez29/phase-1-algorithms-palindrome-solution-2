@@ -1,9 +1,17 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  for (let startIndex = 0; startIndex < word.length / 2; startIndex++) {
+    const endIndex = word.length - 1 - startIndex;
+    if (word[startIndex] !== word[endIndex]) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 /* 
-  Add your pseudocode here
+isPalindrome takes in a word which is reversed by the function reversed(word) then a if statement is used to output true if the value is 
+  is equal to the original or false if its not.
 */
 
 /*
